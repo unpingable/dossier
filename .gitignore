@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+*.egg-info/
+.dossier/
+*.db
+*.db-wal
+*.db-shm
+batch_results.json
