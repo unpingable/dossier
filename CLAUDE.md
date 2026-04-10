@@ -37,6 +37,15 @@ dossier check --base main
 - Entry point: `dossier` CLI via Click (`dossier.cli:main`)
 - Data store: SQLite with WAL mode, stored in `.dossier/dossier.db`
 
+## Debugging Discipline
+
+Shared doctrine across the constellation (annotated source: `agent_gov/CLAUDE.md`):
+
+- **Default to reduction.** Escalate to integration only after reduction has failed to discriminate.
+- **Belief must be earned by the cheapest available falsification, not constructed by accretion.**
+
+**In this project**, "load-bearing" means the moment a prior approval is about to be treated as still valid, or a finding is about to be reported as actionable. The cheapest discriminating test is usually: recompute the diff hash. If it changed, the approval is stale by definition — no integration story can rescue it. The "diff changed → approval stale" invariant is the static version; this is its dynamic version.
+
 ## Don't
 
 - Don't mock the grant store in tests — use real SQLite via `tmp_path`
